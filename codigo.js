@@ -12,7 +12,7 @@ const btnCopiar = document.querySelector("#copiar");
 /*Creacion de las funciones de encriptado, desencriptado y copiado*/
 
 function encriptarTexto(){
-
+/*Tomando la informacion del input y convirtiendola a string y reemplazando valores con el método replace*/ 
     let mensajeEncriptado = String(entradaMensaje.value).replace(/e/g,"enter")
     .replace(/i/g,"imes")
     .replace(/o/g,"ober")
@@ -23,7 +23,7 @@ function encriptarTexto(){
    
 }
 function desencriptarTexto(){
-
+/*Tomando la informacion del input y convirtiendola a string y reemplazando valores con el método replace*/ 
     let mensajeDesencriptado = String(entradaMensaje.value).replace(/enter/g,"e")
     .replace(/imes/g,"i")
     .replace(/ober/g,"o")
@@ -33,6 +33,14 @@ function desencriptarTexto(){
     salidaMensaje.value = mensajeDesencriptado;
 
 }
+function copiar (){
 
+    let mensaje = salidaMensaje.value;
+    navigator.clipboard.writeText(mensaje);
+}
+
+/*Programación de los botones*/
+
+btnCopiar.onclick = copiar;
 btnEncriptar.onclick = encriptarTexto;
 btnDesncriptar.onclick= desencriptarTexto;
