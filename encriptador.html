@@ -1,20 +1,30 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width">
         <title>Encriptador de texto</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
+        <header>
+            <h1 class="logo"><img src="Imagenes/logo.png" alt="Logo alura 'a' "></h1>
+        </header>
         <main>
-            <div class="botones">
-                <input type="text" id="mensaje" placeholder="ingrese su mensaje">
+            <div class="texto">
+                <form>
+                    <label for="mensaje"></label>
+                    <textarea cols="70" rows="10" id="mensaje" oninput="this.value = this.value.toLowerCase()" placeholder="ingrese su mensaje"></textarea>
+                    <label for="salida"></label>
+                    <textarea cols="70" rows="10" id="salida" oninput="this.value = this.value.toLowerCase()" placeholder="Su mensaje encriptado es . . ."></textarea>
+                </form>                
+            </div>
+            <div class="botones">                
                 <button id="encriptar">Encriptar</button>
                 <button id="desencriptar">Desncriptar</button>
-            </div>
-            <div class="botones">
-                <input type="text" id="salida" placeholder="Su mensaje encriptado es . . .">
                 <button id="copiar">copiar</button>
             </div>
         </main>

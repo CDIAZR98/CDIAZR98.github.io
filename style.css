@@ -1,0 +1,48 @@
+body{
+    background: #F3F5FC;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+.texto{
+    background: transparent;
+    color: #fff;
+    resize: none;
+    border: 0 none;
+    font-size: 5em;
+    outline: none;
+    gap: 24px;
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 500px;
+}
