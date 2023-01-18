@@ -3,6 +3,19 @@
 const entradaMensaje = document.querySelector("#mensaje");
 const salidaMensaje = document.querySelector("#salida");
 
+/*permite que el textarea se ajuste automaticamente */
+
+const textarea = document.getElementById("mensaje");
+const alturaMax = 400; 
+
+textarea.addEventListener("input", function(){
+    this.style.height = "auto";
+    if (this.scrollHeight > alturaMax) {
+        this.style.height = alturaMax + "px";
+    } else {
+        this.style.height = this.scrollHeight + "px";
+    }
+}, false);
 /*Conectando los botones para poderlos utilizar */
 
 const btnEncriptar = document.querySelector("#encriptar");
@@ -13,15 +26,14 @@ const btnCopiar = document.querySelector("#copiar");
 
 function validarMensaje (){
     
+    const caracteresEspeciales = /[^a-zA_Z0-9 ]/g;
     let mensaje = String(entradaMensaje.value);
     for (let i = 0; i < mensaje.length; i++){
-        
-        if(mensaje[i] === "á" || mensaje[i] === "é" || mensaje[i] === "í" || mensaje[i] === "ó" || mensaje[i] === "ú"){
-            
+        if(caracteresEspeciales.test(mensaje[i])){
             alert("Por favor no ingrese cáracteres especiales");
-            break;   
-        }
-    }    
+            return;   
+        }          
+    }
 }
 
 /*Creacion de las funciones de encriptado, desencriptado y copiado*/
@@ -29,6 +41,7 @@ function validarMensaje (){
 function encriptarTexto(){
 /*Tomando la informacion del input y convirtiendola a string y reemplazando valores con el método replace*/ 
     validarMensaje();
+
     let mensajeEncriptado = String(entradaMensaje.value).replace(/e/g,"enter")
     .replace(/i/g,"imes")
     .replace(/o/g,"ober")
@@ -41,6 +54,7 @@ function encriptarTexto(){
 function desencriptarTexto(){
 /*Tomando la informacion del input y convirtiendola a string y reemplazando valores con el método replace*/ 
     validarMensaje();
+    
     let mensajeDesencriptado = String(entradaMensaje.value).replace(/enter/g,"e")
     .replace(/imes/g,"i")
     .replace(/ober/g,"o")
