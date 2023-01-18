@@ -1,48 +1,113 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 body{
     background: #F3F5FC;
-    font-family: 'Ubuntu', sans-serif;
-    position: relative;
-    width: 1440px;
-    height: 1024px;
 }
-.logo{
+.columnas{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
-
-    position: absolute;
-    width: 120px;
-    height: 48px;
-    left: 40px;
-    top: 40px;
+    width: 100%;
 }
-.texto{
-    background: transparent;
-    color: #fff;
-    resize: none;
-    border: 0 none;
-    font-size: 5em;
-    outline: none;
-    gap: 24px;
+.texto-izquierda{
+    width:60%;
+    padding: 15px;
+}
+.texto-derecha{
+    position: relative;
+    width: 30%;
+    height: 580px;
+    padding: 15px;
+}
+.texto-izquierda #mensaje{
     position: absolute;
     width: 577px;
     height: 48px;
     left: 240px;
     top: 168px;
-    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+}
+p{
+    position: absolute;    
+    left: 245px;
+    top: 615px;
+    font-weight: bold;
 }
 .botones{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    
-    position: absolute;
-    width: 680px;
+    position: absolute;    
+    left: 300px;
+    top: 630px;
+    margin-top: 10px;
+}
+#encriptar {
+    background: #0A3871;
+    border-radius: 24px;
+    color: #D8DFE8;
+    width: 328px;
     height: 67px;
-    left: 240px;
-    top: 500px;
+    font-size: 20px;
+}
+
+#desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    width: 328px;
+    height: 67px;
+    font-size: 20px;
+}
+.texto-derecha #salida{
+    width: 400px;
+    height: 680px;
+    left: 1000px;
+    top: 40px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    padding: 30px;
+    border: none;
+    resize: none;
+    font-size: 24px;
+    color: #495057;
+}
+#copiar{
+    position:absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    width: 336px;
+    height: 67px;
+    left: 15%;
+    top: 635px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;    
+    font-size: 20px;    
+    color: #0A3871;
+    background: #FFFFFF;
+}
+.texto-izquierda #mensaje:focus , .texto-derecha #salida:focus{
+    outline:none
+}
+#encriptar:hover, #desencriptar:hover, #copiar:hover{
+    background-color: #FF8B13 ;
+    color: whitesmoke;
+    transition: 3ms;    
+}
+#encriptar:active, #desencriptar:active, #copiar:active{
+    transform: scale(0.9);
+}
 }
