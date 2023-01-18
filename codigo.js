@@ -3,19 +3,6 @@
 const entradaMensaje = document.querySelector("#mensaje");
 const salidaMensaje = document.querySelector("#salida");
 
-/*permite que el textarea se ajuste automaticamente */
-
-const textarea = document.getElementById("mensaje");
-const alturaMax = 400; 
-
-textarea.addEventListener("input", function(){
-    this.style.height = "auto";
-    if (this.scrollHeight > alturaMax) {
-        this.style.height = alturaMax + "px";
-    } else {
-        this.style.height = this.scrollHeight + "px";
-    }
-}, false);
 /*Conectando los botones para poderlos utilizar */
 
 const btnEncriptar = document.querySelector("#encriptar");
@@ -75,3 +62,17 @@ function copiar (){
 btnCopiar.onclick = copiar;
 btnEncriptar.onclick = encriptarTexto;
 btnDesncriptar.onclick= desencriptarTexto;
+
+/*permite que el textarea se ajuste automaticamente */
+
+const textarea = document.getElementById("mensaje");
+const alturaMax = 400; 
+
+textarea.addEventListener("input", function(){
+    this.style.height = "auto";
+    if (this.scrollHeight > alturaMax) {
+        this.style.height = alturaMax + "px";
+    } else {
+        this.style.height = this.scrollHeight + "px";
+    }
+}, false);
