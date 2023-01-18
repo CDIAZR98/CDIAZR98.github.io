@@ -21,15 +21,15 @@
         <main>
             <div class="columnas">
                 <div class="texto-izquierda">
-                    <textarea id="mensaje" oninput="this.value = this.value.toLowerCase()" placeholder="ingrese su mensaje"></textarea>
+                    <textarea id="mensaje" oninput="this.value = this.value.toLowerCase()" placeholder="ingrese su mensaje" autofocus></textarea>
                     <p>&#9888; No se permiten mayúsculas o cáracteres especiales</p>
                     <div class="botones">
                         <button id="encriptar">Encriptar</button>
                         <button id="desencriptar">Desencriptar</button>                    
                     </div>
                 </div>
-                <div class="texto-derecha">   
-                    <textarea id="salida"></textarea>    
+                <div class="texto-derecha">
+                    <textarea id="salida" placeholder="&#128270; Ningún mensaje fue encontrado, ingrese el texto que desea encriptar"></textarea>    
                     <button id="copiar">copiar</button>    
                 </div>
             </div>            
