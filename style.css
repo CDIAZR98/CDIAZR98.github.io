@@ -46,7 +46,7 @@ p{
 }
 .botones{
     position: absolute;    
-    left: 300px;
+    left: 250px;
     top: 630px;
     margin-top: 10px;
 }
@@ -70,7 +70,7 @@ p{
 }
 .texto-derecha #salida{
     width: 400px;
-    height: 680px;
+    height: 630px;
     left: 1000px;
     top: 40px;
     background: #FFFFFF;
@@ -81,6 +81,7 @@ p{
     font-size: 24px;
     color: #495057;
 }
+
 #copiar{
     position:absolute;
     box-sizing: border-box;
@@ -103,11 +104,21 @@ p{
     outline:none
 }
 #encriptar:hover, #desencriptar:hover, #copiar:hover{
-    background-color: #FF8B13 ;
+    background-color: #c38441 ;
     color: whitesmoke;
     transition: 3ms;    
 }
 #encriptar:active, #desencriptar:active, #copiar:active{
     transform: scale(0.9);
 }
+
+#salida::placeholder{
+    position:absolute;
+    display: flex;
+    text-align: center;
+    left: 3%;
+    top: 70%;
+    color: #a1a6ab;
+    font-size: 20px;
+
 }
